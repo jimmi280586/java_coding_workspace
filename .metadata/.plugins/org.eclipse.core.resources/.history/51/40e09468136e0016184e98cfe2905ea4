@@ -1,0 +1,14 @@
+package utillity.arrays.Calculating.intergrate.functions;
+
+import inter.calculator.Function;
+
+public class F1 implements Function 
+{
+
+	public double f(double x)
+	{
+		
+		return (x * x);
+	}
+	
+}

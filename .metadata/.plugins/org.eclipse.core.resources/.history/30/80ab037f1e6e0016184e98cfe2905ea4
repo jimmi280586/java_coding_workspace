@@ -1,0 +1,103 @@
+/**
+ * 16.02.2016 New structure
+ * 18.09.2011 Original version
+ */
+
+package linkedbinarytree;
+
+
+import java.util.Iterator;
+
+import Linked.binary.tree.LinkedBinaryTree;
+import interfaces.BinaryTreeADT;
+
+
+public class TestLinkedBinaryTree
+{
+	public static void main( String[] args )
+	{
+		new TestLinkedBinaryTree().run();
+	}
+
+
+	private void run()
+	{
+		test( buildTree() );
+		test( buildTree2() );
+	}
+
+
+	private void test( BinaryTreeADT<String> tree )
+	{
+		System.out.println( "size: " + tree.size() );
+		System.out.println( "isEmpty: " + tree.isEmpty() );
+		System.out.println( "contains: " + tree.contains( "A" ) );
+		System.out.println( "contains: " + tree.contains( "X" ) );
+		System.out.println( "contains: " + tree.contains( "N" ) );
+		System.out.println( "toString: " + tree );
+		System.out.println( "height: " + tree.height() );
+		System.out.println( "isFull: " + tree.isFull() );
+		System.out.println( "isBalanced: " + tree.isBalanced() );
+
+		printTraversal( "Pre:  ", tree.iteratorPreOrder() );
+		printTraversal( "In:   ", tree.iteratorInOrder() );
+		printTraversal( "Post: ", tree.iteratorPostOrder() );
+		printTraversal( "Level:", tree.iteratorLevelOrder() );
+
+		System.out.println( "---" );
+	}
+
+
+	private linked.binary.tree.LinkedBinaryTree<String> buildTree()
+	{
+		linked.binary.tree.LinkedBinaryTree<String> lTree = new linked.binary.tree.LinkedBinaryTree<String>( "L" );
+		linked.binary.tree.LinkedBinaryTree<String> mTree = new linked.binary.tree.LinkedBinaryTree<String>( "M" );
+		linked.binary.tree.LinkedBinaryTree<String> nTree = new linked.binary.tree.LinkedBinaryTree<String>( "N" );
+		linked.binary.tree.LinkedBinaryTree<String> oTree = new linked.binary.tree.LinkedBinaryTree<String>( "O" );
+		linked.binary.tree.LinkedBinaryTree<String> pTree = new linked.binary.tree.LinkedBinaryTree<String>( "P" );
+
+		linked.binary.tree.LinkedBinaryTree<String> gTree = new linked.binary.tree.LinkedBinaryTree<String>( "G" );
+		linked.binary.tree.LinkedBinaryTree<String> hTree = new linked.binary.tree.LinkedBinaryTree<String>( "H", lTree, mTree );
+		linked.binary.tree.LinkedBinaryTree<String> iTree = new linked.binary.tree.LinkedBinaryTree<String>( "I" );
+		linked.binary.tree.LinkedBinaryTree<String> jTree = new linked.binary.tree.LinkedBinaryTree<String>( "J", nTree, null );
+		linked.binary.tree.LinkedBinaryTree<String> kTree = new linked.binary.tree.LinkedBinaryTree<String>( "K", oTree, pTree );
+
+		linked.binary.tree.LinkedBinaryTree<String> dTree = new linked.binary.tree.LinkedBinaryTree<String>( "D", gTree, hTree );
+		linked.binary.tree.LinkedBinaryTree<String> eTree = new linked.binary.tree.LinkedBinaryTree<String>( "E", iTree, null );
+		linked.binary.tree.LinkedBinaryTree<String> fTree = new linked.binary.tree.LinkedBinaryTree<String>( "F", jTree, kTree );
+
+		linked.binary.tree.LinkedBinaryTree<String> bTree = new linked.binary.tree.LinkedBinaryTree<String>( "B", dTree, eTree );
+		linked.binary.tree.LinkedBinaryTree<String> cTree = new linked.binary.tree.LinkedBinaryTree<String>( "C", null, fTree );
+
+		linked.binary.tree.LinkedBinaryTree<String> aTree = new linked.binary.tree.LinkedBinaryTree<String>( "A", bTree, cTree );
+
+		return aTree;
+	}
+
+
+	private linked.binary.tree.LinkedBinaryTree<String> buildTree2()
+	{
+		linked.binary.tree.LinkedBinaryTree<String> dTree = new linked.binary.tree.LinkedBinaryTree<String>( "D" );
+		linked.binary.tree.LinkedBinaryTree<String> eTree = new linked.binary.tree.LinkedBinaryTree<String>( "E" );
+		linked.binary.tree.LinkedBinaryTree<String> fTree = new linked.binary.tree.LinkedBinaryTree<String>( "F" );
+		linked.binary.tree.LinkedBinaryTree<String> gTree = new linked.binary.tree.LinkedBinaryTree<String>( "G" );
+
+		linked.binary.tree.LinkedBinaryTree<String> bTree = new linked.binary.tree.LinkedBinaryTree<String>( "B", dTree, eTree );
+		linked.binary.tree.LinkedBinaryTree<String> cTree = new linked.binary.tree.LinkedBinaryTree<String>( "C", fTree, gTree );
+
+		linked.binary.tree.LinkedBinaryTree<String> aTree = new linked.binary.tree.LinkedBinaryTree<String>( "A", bTree, cTree );
+
+		return aTree;
+	}
+
+
+	private void printTraversal( String text, Iterator<String> iterator )
+	{
+		System.out.print( text );
+
+		while( iterator.hasNext() )
+			System.out.print( " " + iterator.next() );
+
+		System.out.println();
+	}
+}
