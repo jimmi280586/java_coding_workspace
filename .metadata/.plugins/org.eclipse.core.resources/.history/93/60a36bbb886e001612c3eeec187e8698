@@ -1,0 +1,5 @@
+package rmipeer2peer;
+
+public interface ReceiveMessageInterface {
+
+}

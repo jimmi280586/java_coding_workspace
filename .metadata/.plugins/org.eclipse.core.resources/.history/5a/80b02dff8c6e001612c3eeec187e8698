@@ -1,0 +1,57 @@
+package rmipeer2peer;
+
+import java.net.Inet4Address;
+import java.rmi.*;    
+import java.rmi.server.*;    
+import java.rmi.Naming;    
+import java.rmi.registry.LocateRegistry;
+
+
+interface HelloInterface extends Remote    
+{    
+   public String say(String said) throws RemoteException;    
+}  
+
+class Hello extends UnicastRemoteObject implements HelloInterface    
+{       
+   
+   public Hello() throws RemoteException    
+   {    
+      super();    
+   }    
+   
+    public String say(String said) throws RemoteException    
+   {    
+      System.out.println(said);
+      String message = "Sever got what you said"; 
+      return message;    
+   }    
+}    
+
+public class ThreadOfHelloServer implements Runnable   
+{    
+   public void run()    
+   {    
+      try   
+      {
+         LocateRegistry.createRegistry(1099);    
+         HelloInterface hello = new Hello();    
+         Naming.rebind("Hello " + Inet4Address.getLocalHost().getHostAddress(), hello);    
+         //Naming.rebind("//" + Inet4Address.getLocalHost().getHostAddress() + ":80/" + "Hello",hello);    
+            
+         System.out.println("Hello Server is ready.");    
+      }    
+      catch (Exception e)    
+      {    
+         System.out.println("Hello Server failed: " + e);    
+      }    
+   }    
+   
+   public static void main(String [] args)    
+   {    
+	 new ThreadOfHelloServer().run();
+   } 
+}   
+
+
+
