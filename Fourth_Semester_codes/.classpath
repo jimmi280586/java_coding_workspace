@@ -4,6 +4,7 @@
 	<classpathentry kind="src" path="exeptions"/>
 	<classpathentry kind="src" path="interfaces"/>
 	<classpathentry kind="src" path="threads"/>
+	<classpathentry kind="src" path="tcpClientServerSystemWithGui"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
