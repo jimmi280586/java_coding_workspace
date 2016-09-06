@@ -1,4 +1,3 @@
-/Controller.class
 /Heaps/
 /arraySet/
 /arrayStack/
@@ -39,5 +38,6 @@
 /stacks/
 /strings/
 /test/
-/test.class
 /tree/
+/Controller.class
+/test.class

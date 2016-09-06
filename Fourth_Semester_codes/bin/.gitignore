@@ -1,3 +1,5 @@
+/P2PAddressServer.class
+/P2PPeer.class
 /client/
 /clientThreads/
 /common/
@@ -10,7 +12,5 @@
 /rmipeer2peer/
 /server/
 /serverThreads/
-/utillity/
-/P2PAddressServer.class
-/P2PPeer.class
 /system/
+/utillity/
