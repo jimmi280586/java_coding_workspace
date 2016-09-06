@@ -1,0 +1,19 @@
+/*
+ * 09.02.2015 Original version
+ */
+
+
+package dk.via.jpe.p2pmsg.common;
+
+
+import java.rmi.*;
+
+
+import dk.via.jpe.p2pmsg.model.*;
+
+
+public interface PeerInterface
+	extends Remote
+{
+	public void deliverMessage( Message message ) throws RemoteException;
+}

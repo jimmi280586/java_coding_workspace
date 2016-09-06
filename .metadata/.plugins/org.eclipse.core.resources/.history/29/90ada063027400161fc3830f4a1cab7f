@@ -1,0 +1,23 @@
+/*
+ * 09.02.2015 Original version
+ */
+
+
+package common;
+
+
+import java.rmi.*;
+
+import dk.via.jpe.p2pmsg.model.*;
+
+
+public interface AddressServerInterface
+	extends Remote
+{
+	public boolean registerPeer( Peer peer ) throws RemoteException;
+	
+	public Peer findPeer( String alias ) throws RemoteException;
+	
+	
+	public static final String SERVICE_NAME = "p2padr";
+}
