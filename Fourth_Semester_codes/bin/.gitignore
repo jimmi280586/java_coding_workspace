@@ -1,0 +1,16 @@
+/client/
+/clientThreads/
+/common/
+/exceptions/
+/gui/
+/interfaces/
+/model/
+/p2pmsgModelCommonClassDiagram.jpg
+/peer/
+/rmipeer2peer/
+/server/
+/serverThreads/
+/utillity/
+/P2PAddressServer.class
+/P2PPeer.class
+/system/

@@ -1,6 +1,0 @@
-package utillity.arrays.inter.calculator;
-
-public interface Function 
-{
-	double f (double x);	
-}

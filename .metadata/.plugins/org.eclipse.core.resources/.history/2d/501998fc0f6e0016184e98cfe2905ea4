@@ -1,5 +1,0 @@
-package Delegation;
-
-public class MyBoundedBufferUsingDelegation {
-
-}
