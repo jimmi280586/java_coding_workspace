@@ -9,17 +9,14 @@
 	<classpathentry kind="src" path="src/Assignment_2"/>
 	<classpathentry kind="src" path="src/Stack"/>
 	<classpathentry kind="src" path="src/Sets"/>
-	<classpathentry kind="src" path="src/RedBlackTree"/>
 	<classpathentry kind="src" path="src/Nim_Game_Assignment2"/>
 	<classpathentry kind="src" path="src/LinkedBinaryTre"/>
 	<classpathentry kind="src" path="src/LinkedBinarySearchTre"/>
 	<classpathentry kind="src" path="src/LinkedBinaryBostTreeAssignment1"/>
 	<classpathentry kind="src" path="src/HitBinarySearchTree"/>
 	<classpathentry kind="src" path="src/Heap"/>
-	<classpathentry kind="src" path="src/FarryEventSimulation"/>
 	<classpathentry kind="src" path="src/Graph"/>
 	<classpathentry kind="src" path="src/EventSimulation"/>
-	<classpathentry kind="src" path="src/BirthdayReminderHeap"/>
 	<classpathentry kind="src" path="src/BackTracking"/>
 	<classpathentry kind="src" path="src/avl"/>
 	<classpathentry kind="src" path="exeptions"/>
